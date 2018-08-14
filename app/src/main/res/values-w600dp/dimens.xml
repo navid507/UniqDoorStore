@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_au">192dp</dimen>
+    <dimen name="image_top_product">240dp</dimen>
+
+    <dimen name="img_logo">224dp</dimen>
+    <dimen name="pb_size">48dp</dimen>
+    <dimen name="user_profile_image_size">320dp</dimen>
+
+    <dimen name="top_slider_height">260dp</dimen>
+
+    <dimen name="tour_list_width">240dp</dimen>
+    <dimen name="tour_list_width_half">120dp</dimen>
+    <dimen name="tour_list_scroll_height">248dp</dimen>
+    <dimen name="tour_list_height">200dp</dimen>
+    <dimen name="tour_list_height_image">164dp</dimen>
+    <dimen name="tour_list_height_text">36dp</dimen>
+
+    <dimen name="image_top_news_height">320dp</dimen>
+
+</resources>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".Main.ProductsActivity">
+
+    <!--<include layout="@layout/toolbar"/>-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dip"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dip"
+            app:contentInsetStart="@dimen/zero">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <!--<ImageView-->
+        <!--android:id="@+id/categoryHeaderPhoto"-->
+        <!--android:src="@mipmap/ic_launcher"-->
+        <!--android:layout_width="75dip"-->
+        <!--android:layout_height="58dip"-->
+        <!--android:layout_marginTop="20dip"-->
+        <!--android:layout_gravity="center|top"-->
+        <!--android:elevation="8dip"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:adjustViewBounds="true"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="56dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/logo"
+            android:visibility="gone"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/ap_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:background="@color/titleBg"
+            android:gravity="center"
+            android:text="@string/chooseproductofseller"
+            android:textColor="@color/colorSecondary"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@drawable/header"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="55dp"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="4dp"-->
+                <!--android:layout_marginTop="4dp" />-->
+
+        <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/ap_tv_title"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:padding="6dp"-->
+            <!--android:layout_below="@+id/ac_pv_cat"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:background="@color/sai"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/chooseproductofseller"-->
+            <!--android:textColor="#fff"-->
+            <!--android:textSize="17dp"-->
+            <!--android:textStyle="bold" />-->
+
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="160dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:background="@drawable/logo" />-->
+
+        <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/ap_iv_in"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="120dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginRight="15dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:src="@drawable/brands_product" />&ndash;&gt;-->
+
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/footerHeight"
+        android:background="@color/appBackground">
+
+        <ProgressBar
+            android:id="@+id/ap_pv_main"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:alpha="0.14"-->
+            <!--android:background="@drawable/back_arghavan" />-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ap_lv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layoutDirection="rtl"
+            android:padding="5dp"
+            android:touchscreenBlocksFocus="false"
+            tools:listitem="@layout/lele_product" />
+
+        <TextView
+            android:id="@+id/ap_tv_noresult"
+            style="@style/listviewstyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/red"
+            android:textSize="26dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/categoryHeaderPhoto"
+        android:src="@drawable/logo"
+        android:layout_width="75dip"
+        android:layout_height="58dip"
+        android:layout_marginTop="20dip"
+        android:layout_gravity="center|top"
+        android:elevation="8dip"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+
+    <include layout="@layout/footer"/>
+</FrameLayout>

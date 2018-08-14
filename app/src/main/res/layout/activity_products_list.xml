@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mmll"
+    tools:context="com.sai.udstore.Main.Products.ProductsListActivity">
+
+    <include layout="@layout/header" />
+
+    <TextView
+        android:id="@+id/ap_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="درب های گردان"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_header2"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="@dimen/padding_large"
+        android:layout_marginLeft="@dimen/padding_xlarge"
+        android:layout_marginRight="@dimen/padding_xlarge"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:background="@color/blue" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+
+        <ProgressBar
+            android:id="@+id/ap_pv_cat"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ap_lv_prds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl"
+            android:touchscreenBlocksFocus="false"
+            tools:listitem="@layout/lele_product" />
+
+        <TextView
+            android:id="@+id/ap_tv_noresult"
+            style="@style/listviewstyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/red"
+            android:textSize="26dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/footer" />
+</LinearLayout>

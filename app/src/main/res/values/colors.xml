@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ************ Application ************ -->
+    <color name="appBackground">#ffffff</color>
+    <color name="colorAccentSecondary">#303F9F</color>
+    <color name="colorSecondary">#61392f</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="titleBg">#BBffffff</color>
+    <!-- ************ Application ************ -->
+
+    <!-- ************ Navigation Menu ************ -->
+    <color name="navMenuBg">#c4e2fa</color>
+    <!-- ************ Navigation Menu ************ -->
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="red">#c50000</color>
+    <color name="colorAccent">#448AFF</color>
+    <color name="white">#ffffff</color>
+    <color name="textcolor">#252525</color>
+    <color name="lightwhite">#aaaaaa</color>
+    <color name="black">#000000</color>
+    <color name="blacktrans">#aa000000</color>
+    <color name="transcolorPrimary">#9bffffff</color>
+    <color name="back_light">#66000000</color>
+    <color name="green">#55a73c</color>
+    <color name="jik_red">#da251c</color>
+    <color name="gray_light">#e5e5e5</color>
+
+    <color name="gray_teb">#61737d</color>
+    <!--<color name="blue">#034da2</color>-->
+    <color name="blue">#303F9F</color>
+
+    <color name="back_gray_list">#f7f6f6</color>
+    <color name="back_gray">#efefef</color>
+    <color name="back_blue">#1cafe5</color>
+    <color name="back_button">#00a68a</color>
+
+    <color name="text_accept">#1a950d</color>
+    <color name="text_reject">#950d0d</color>
+    <color name="text_nothing">#8f8f8f</color>
+
+</resources>

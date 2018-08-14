@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ft_tv_title_team"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:background="@color/jik_red"
+            android:gravity="center"
+            android:text="هنرمندان صنایع دستی"
+            android:textColor="#fff"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/ft_pb_team"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/ft_grid_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnWidth="135dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:paddingTop="5dp"
+        android:stretchMode="columnWidth"></GridView>
+
+</LinearLayout>

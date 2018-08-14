@@ -1,0 +1,96 @@
+<resources>
+    <!-- ************ Application ************ -->
+    <dimen name="zero">0dip</dimen>
+    <dimen name="corner">4dip</dimen>
+    <dimen name="stroke">4dip</dimen>
+    <dimen name="footerTopBoderWidth">2dip</dimen>
+    <dimen name="footerTopOffset">-2dip</dimen>
+    <dimen name="contentMarginTop">10dip</dimen>
+    <dimen name="gridViewItemSpacing">4dip</dimen>
+    <!-- ************ Application ************ -->
+
+    <!-- ************ Toolbar ************ -->
+    <dimen name="navigationToggleIconSize">30sp</dimen>
+    <dimen name="navigationToggleIconMarginR">17dip</dimen>
+    <!-- ************ Toolbar ************ -->
+
+
+    <!-- ************ Footer ************ -->
+    <dimen name="footerHeight">50dip</dimen>
+    <dimen name="footerBgHeight">41dip</dimen>
+    <!-- ************ Footer ************ -->
+
+
+    <!-- ************ Header ************ -->
+    <dimen name="headerHeight">52dip</dimen>
+    <dimen name="headerBgHeight">41dip</dimen>
+    <!-- ************ Footer ************ -->
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="image_thumbnail_size">100dp</dimen>
+    <dimen name="image_thumbnail">240dp</dimen>
+    <dimen name="team_thumbnail_size">240dp</dimen>
+    <dimen name="product_image_size">160dp</dimen>
+    <dimen name="cat_image_size">80dp</dimen>
+    <dimen name="user_profile_image_size">216dp</dimen>
+    <dimen name="product_list_height">120dp</dimen>
+    <dimen name="brand_list_height">96dp</dimen>
+
+    <dimen name="image_top_news_height">240dp</dimen>
+
+    <dimen name="image_top_product">160dp</dimen>
+    <dimen name="back_button">32dp</dimen>
+
+    <dimen name="lv_marginrl">48dp</dimen>
+    <dimen name="lv_margintop">16dp</dimen>
+    <dimen name="img_logo">144dp</dimen>
+    <dimen name="pb_size">32dp</dimen>
+
+
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">22sp</dimen>
+    <dimen name="text_size_header2">32sp</dimen>
+    <dimen name="text_size_header1">40sp</dimen>
+
+
+    <dimen name="padding_xsmall">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_xlarge">32dp</dimen>
+
+    <dimen name="logo_au">96dp</dimen>
+    <dimen name="icon_teb">52dp</dimen>
+
+    <dimen name="icon_size_small">32dp</dimen>
+    <dimen name="icon_size_normal">48dp</dimen>
+    <dimen name="icon_size_large">64dp</dimen>
+    <dimen name="icon_size_xlarge">96dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+
+    <dimen name="nav_height">180dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="top_slider_height">180dp</dimen>
+    <dimen name="top_slider_ll_height">120dp</dimen>
+    <dimen name="dot_w">32dp</dimen>
+    <dimen name="dot_h">4dp</dimen>
+
+    <dimen name="tour_list_scroll_height">136dp</dimen>
+    <dimen name="tour_list_height">90dp</dimen>
+    <dimen name="tour_list_height_image">104dp</dimen>
+    <dimen name="tour_list_height_text">24dp</dimen>
+    <dimen name="tour_list_width">100dp</dimen>
+    <dimen name="tour_list_width_half">75dp</dimen>
+
+
+    <dimen name="contact_us_height">48dp</dimen>
+
+
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/padding_normal"
+    android:elevation="4dip"
+    android:gravity="center_vertical"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_normal">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_light"
+        android:layoutDirection="rtl"
+        android:id="@+id/mmll"
+        android:padding="@dimen/padding_normal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/orderTexts"
+                android:text="@string/order_row" />
+
+            <TextView
+                android:id="@+id/le_tv_order_row"
+                style="@style/orderTexts"
+                android:gravity="left"
+                android:text="1" />
+        </TableRow>
+
+        <TableRow>
+
+
+            <TextView
+                style="@style/orderTexts"
+                android:text="@string/id_factor" />
+
+            <TextView
+                android:id="@+id/le_tv_order_id_factor"
+                style="@style/orderTexts"
+                android:gravity="left"
+                android:text="29845" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/orderTexts"
+                android:text="@string/order_date" />
+
+            <TextView
+                android:id="@+id/le_tv_order_date"
+                style="@style/orderTexts"
+                android:gravity="left"
+                android:text="1397/04/02"
+
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/orderTexts"
+                android:text="@string/order_state" />
+
+            <TextView
+                android:id="@+id/le_tv_order_state"
+                style="@style/orderTexts"
+                android:gravity="left"
+                android:text="پرداخت شده"
+                android:textColor="@color/green" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/orderTexts"
+                android:text="@string/order_pardakht" />
+
+            <TextView
+                android:id="@+id/le_tv_order_payment"
+                style="@style/orderTexts"
+                android:gravity="left"
+                android:text="اعتباری" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/orderTexts"
+                android:text="قابل پرداخت:" />
+
+            <TextView
+                android:id="@+id/le_tv_order_price"
+                style="@style/orderTexts"
+                android:gravity="left"
+                android:text="10.265.268" />
+        </TableRow>
+
+        <TableRow android:visibility="gone">
+
+            <TextView
+                style="@style/orderTexts"
+                android:text="@string/order_process" />
+
+            <TextView
+                android:id="@+id/le_tv_order_process"
+                style="@style/orderTexts"
+                android:gravity="left"
+                android:text="مشاهده" />
+        </TableRow>
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:background="@color/blue" />
+
+
+</LinearLayout>

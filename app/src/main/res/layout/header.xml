@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="top"
+    android:background="@color/blue"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:layoutDirection="rtl">
+
+        <ImageView
+            android:id="@+id/main_toggleNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/padding_large"
+            android:clickable="true"
+            android:src="@drawable/ic_action_dehaze" />
+
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:src="@drawable/ic_logo_white" />
+
+        <TextView
+            android:id="@+id/main_nav_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/navigationToggleIconMarginR"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="left"
+            android:text="@string/main_text_home"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/main_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:src="@drawable/ic_rahnama_09" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_teb" />
+
+</LinearLayout>

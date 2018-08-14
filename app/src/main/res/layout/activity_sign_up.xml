@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    tools:context=".Main.Register.SignUpActivity">
+
+
+
+        <TextView
+            android:id="@+id/as_tv_title_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="تغییر رمز عبور"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold" />
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="@dimen/padding_xlarge"
+            android:layout_marginRight="@dimen/padding_xlarge"
+            android:backgroundTint="@color/blue"/>
+
+
+        <ProgressBar
+            android:id="@+id/as_pb_sign_up"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:alpha="0.14"-->
+            <!--android:background="@drawable/back_arghavan" />-->
+
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_marginRight="@dimen/padding_large"
+                        android:layout_marginTop="45dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/as_tv_title_firstName_sign_up"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="نام کاربری:"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/text_size_large"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/as_tv_firstName_sign_up"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="نام"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textColorHint="#D6DAC2"
+                                android:textDirection="rtl"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <TextView
+                                android:id="@+id/as_tv_title_lastName_sign_up"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="رمز عبور فعلی:"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/text_size_large"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/as_tv_lastName_sign_up"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="نام خانوادگی"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textColorHint="#D6DAC2"
+                                android:textSize="@dimen/text_size_large" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <EditText
+                                android:id="@+id/as_tv_tel_sign_up"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="شماره ثابت"
+                                android:inputType="phone"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textColorHint="#D6DAC2"
+                                android:textDirection="ltr"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <TextView
+                                android:id="@+id/as_tv_title_address_sign_up"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="تکرار رمز عبور:"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/text_size_large"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/as_tv_address_sign_up"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="آدرس"
+                                android:imeActionLabel="ثبت نام"
+                                android:imeOptions="actionUnspecified"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textColorHint="#D6DAC2"
+                                android:textDirection="rtl"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/as_btn_sign_up"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="100dp"
+                            android:background="@color/blue"
+                            android:text="تایید"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/as_tv_title_tel_sign_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="رمز عبور جدید:"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/text_size_large"
+                        android:textStyle="bold" />
+
+                </ScrollView>
+
+
+
+        </LinearLayout>
+
+

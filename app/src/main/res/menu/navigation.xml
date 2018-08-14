@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_invoice_state"
+        android:title="@string/title_status" />
+
+    <item
+        android:id="@+id/navigation_invoice_goods"
+        android:title="@string/title_goods" />
+
+    <item
+        android:id="@+id/navigation_invoice_details"
+        android:title="@string/title_description" />
+
+</menu>

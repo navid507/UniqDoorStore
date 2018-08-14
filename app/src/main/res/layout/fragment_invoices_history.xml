@@ -1,0 +1,78 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:context="com.sai.udstore.Main.Fragment.InvoicesHistoryFragment">
+
+    <LinearLayout
+        android:id="@+id/mmll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_normal"
+            android:text="سفارش های من"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_header2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/padding_xlarge"
+            android:layout_marginRight="@dimen/padding_xlarge"
+            android:background="@color/blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ao_ll_pb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/ao_pb_main"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/ao_tv_err"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="خطا در دریافت اطلاعات"
+                    android:textColor="@color/text_reject" />
+
+                <Button
+                    android:id="@+id/ao_bt_retry"
+                    android:layout_width="112dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:onClick="doRefresh"
+                    android:text="تلاش مجدد"
+                    android:textColor="@color/gray_teb"
+                    android:textSize="@dimen/text_size_small" />
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ao_rv_main"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:listitem="@layout/lele_factor_linear"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

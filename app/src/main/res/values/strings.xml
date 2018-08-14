@@ -1,0 +1,198 @@
+<resources>
+    <string name="app_name">Unique Door</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="title_app">Unique Door</string>
+    <string name="welcome_to_app">Welcome to Unique Door</string>
+    <string name="advantages_of_jik">Your advantages with Unique Door</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="OK">تایید </string>
+    <string name="send_agian">ارسال دوباره </string>
+    <string name="Cancel">انصراف</string>
+    <string name="wifi_dlg_text">لطفا وایرلس خود را روشن نمایید </string>
+    <string name="reg_error_no_crm">Username or password is incorrect</string>
+    <string name="server_connection_problem">مشکل در ارتباط با سرور</string>
+    <string name="error_mobile">لطفاً تلفن همراه را وارد نمایید</string>
+    <string name="error_password">Please Enter Password</string>
+    <string name="error_password_valid">Minimum Password length is 6</string>
+    <string name="error_firstName">لطفاً نام را وارد نمایید</string>
+    <string name="error_lastName">لطفاً نام خانوادگی را وارد نمایید</string>
+    <string name="error_address">لطفاً آدرس را وارد نمایید</string>
+    <string name="error_tel">لطفاً تلفن را وارد نمایید</string>
+    <string name="error_invalid_mobile">لطفاً تلفن همراه را صحیح وارد نمایید</string>
+    <string name="entenr_verify">لطفا کد تایید دریافتی را وارد نمایید</string>
+    <string name="product_list">لیست محصولات</string>
+    <string name="pro_list">لیست کامل</string>
+    <string name="profile_text">آقای %s خوش آمدید</string>
+    <string name="etebar">اعتبار:</string>
+    <string name="off">میزان تخفیف:</string>
+    <string name="download">مرکز دانلود</string>
+    <string name="orders">سفارش ها</string>
+    <string name="nav_name">محمد حسن پور</string>
+    <string name="nav_tel">09157003163</string>
+    <string name="add_product">افزودن به سبد خرید</string>
+    <string name="price_product">22.250.000 ریال</string>
+    <string name="order_row">ردیف:</string>
+    <string name="id_factor">شماره فاکتور:</string>
+    <string name="order_date">تاریخ:</string>
+    <string name="order_state">وضعیت:</string>
+    <string name="order_pardakht">نحوه پرداخت:</string>
+    <string name="order_price">قابل پرداخت:</string>
+    <string name="order_process">عملیات:</string>
+
+
+    <string name="product_title">درب های گردان</string>
+    <string name="category_title">دسته بندی</string>
+    <string name="address">Siemensring 91, 47877 Willich (Munchheide l)</string>
+    <string name="about">
+ گروه صنعتی دربهای اتوماتیک شیشه چی با مجموعه ای متشکل از کارشناسان و تکنسینهای مجرب در زمینه مهندسی الکترونیک و مکانیک پس از چندین سال تحقیقات و بررسی عوامل تولید ، با طرح اولیه محصول خود متناسب با نیاز بازار ایران ، در سال 1381 بطور تخصصی در زمینه تولید دربهای اتوماتیک مجهز به چشم الکترونیک فعالیت خود را آغاز نمود.
+شرکت درب های اتوماتیک شیشه چی با بهره گیری از مدرنترین تجهیزات و ماشین آلات روز اقدام به تولید و صادرات انواع درب اتوماتیک در شرق کشور نموده است که از ان جمله به دستگاه برش سی ان سی ، خط تولید شیشه دوجداره ، خط تولید شیشه سکوریت ، کوره رنگ و دستگاه نورد اشاره کرد.
+این شرکت به مدیریت آقای هاشم شیشه چی با 13 سال سابقه کاری درزمینه درب های اتوماتیک شروع به فعالیت کرده است . در حال حاضر این شرکت صادرات درب های اتوماتیک را به کشور های حاشیه خلیج فارس انجام داده و روز به روز در حال توسعه و پوشش دهی مناطق مختلف ایران می باشد.
+
+    </string>
+
+
+    <string name="advantages" formatted="true">
+        \u2022 Expert on Japanese Food
+        \n\u2022 Goods directly from manufacturers
+\n\u2022 Safety and Health
+\n\u2022 Comprehensive support
+\n\u2022 Better products ar affordable prices
+\n\u2022 Integrated Logistics System
+
+    </string>
+    <string name="cats">دسته ها</string>
+    <string name="searchcats">جستجو در دسته ها</string>
+    <string name="subcatsof" formatted="false">زیر دسته های %s</string>
+    <string name="name">نام</string>
+    <string name="comment">توضیحات</string>
+    <string name="code">کد</string>
+    <string name="productsofcat" formatted="false"> %s</string>
+    <string name="chooseproductofseller" formatted="false">انتخاب کالا از  %s</string>
+
+    <string name="product_in_order">سفارش های من</string>
+    <string name="number">تعداد</string>
+
+
+    <!--Fonts-->
+    <string name="MaterialIcons">font/MaterialIconsRegular.ttf</string>
+    <string name="BTrafficBold">font/BTrafficBold.ttf</string>
+    <string name="BTraffic">font/BTraffic.ttf</string>
+
+    <!--Toolbar-->
+    <string name="navigationToggleIcon"></string>
+
+    <!--<string name="main_text_brands">برندها</string>-->
+    <!--<string name="main_text_cats">دسته ها</string>-->
+    <!--<string name="main_text_products">محصولات</string>-->
+    <!--<string name="main_text_profile">پروفایل</string>-->
+    <!--<string name="main_text_about_us">درباره ما</string>-->
+    <!--<string name="main_text_contact_us">ارتباط با ما</string>-->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="factor_registered" formatted="true">سفارش شما با شماره فاکتور %s ثبت گردید.</string>
+    <string name="see_orders">پیگیری سفارش</string>
+
+    <string name="activity_title_factors">آرشیو فاکتورها</string>
+    <string name="activity_title_product">جزئیات محصول </string>
+
+
+    <string name="nav_home"> صفحه اصلی </string>
+    <string name="nav_products"> دسته بندی </string>
+    <string name="nav_orders"> سبد خرید </string>
+    <string name="nav_history"> لیست فاکتورها </string>
+    <string name="nav_download"> مرکز دانلود </string>
+    <string name="nav_about_us"> درباره ما </string>
+    <string name="nav_profile"> پروفایل کاربری </string>
+    <string name="nav_contact_us"> ارتباط با ما </string>
+    <string name="nav_exit"> خروج </string>
+
+    <string name="customer">Costomer No:</string>
+    <string name="tell">Tel:</string>
+    <string name="mobile">Mobile:</string>
+    <string name="email_p">Email:</string>
+    <string name="company">Company Address:</string>
+    <string name="deleviry_add">Deleviry Address:</string>
+    <string name="contact_tell">+49(0)02154/42095</string>
+    <string name="contact_tell_2">+49(0)02154/1387</string>
+    <string name="contact_fax">+49(0)02154/1475</string>
+    <string name="contact_mobile">+49(0)1637173471</string>
+    <string name="contact_email">asia@uniquedoor.de</string>
+    <string name="contact_web">www.uniquedoor.co</string>
+
+    <string name="site_info">http://www.sanabad-ai.ir/</string>
+    <string name="instagram">https://www.instagram.com/_u/sanabadai/</string>
+    <string name="telegram">http://telegram.me/soroushtebcompany</string>
+    <string name="facebook">https://www.facebook.com/sanabadAI/</string>
+    <string name="linkedin">https://www.linkedin.com/company/هوش-افزار-سناباد</string>
+
+
+    <string name="order_quantity">Quantity:</string>
+    <string name="order_chbox">please consider if you want box of goods active this select box</string>
+    <string name="number_product">Number of product</string>
+    <string name="news_str">Lorem ipsum dolor sit amet, consecteture adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</string>
+    <string name="favorites_str">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+
+    <string name="deleviry_address">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</string>
+    <string name="discriptions_str">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidentnumquam eius modi tempora incident ut labore et dolore magnam aliquam quaerat voluptatem.</string>
+    <string name="main_text_home">Home</string>
+    <string name="main_text_categories">Categories</string>
+    <string name="main_text_products">Products</string>
+    <string name="main_text_orders">Orders</string>
+    <string name="main_text_favorites">Favorites</string>
+    <string name="main_text_invoices">Invoices History</string>
+    <string name="main_text_about_us">About Us</string>
+    <string name="main_text_profile">Profile</string>
+    <string name="main_text_contact_us">Contact Us</string>
+    <string name="main_text_exit">Exit</string>
+    <string name="main_text_news">News</string>
+    <string name="product_add_title">اقلام مازاد تلسکوپی یک طرفه</string>
+
+    <string name="title_status">Status</string>
+    <string name="title_goods">Goods</string>
+    <string name="title_description">Description</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_invoice_details">InvoiceDetailsActivity</string>
+
+    <string name="login">Login</string>
+
+    <string name="fav">Favorite</string>
+    <string name="order">Order</string>
+    <string name="article_number">Article No: </string>
+    <string name="box"> Box</string>
+
+    <string name="json_cat">[
+    {
+        \"id\": 1,
+        \"name\": \"درب های تلسکوپی\"
+    },
+    {
+        \"id\": 2,
+        \"name\": \"درب های کشویی\"
+    },
+    {
+        \"id\": 3,
+        \"name\": \"درب های خروج اضطراری\"
+    },
+    {
+        \"id\": 4,
+        \"name\": \"درب های مثلثی\"
+    },
+    {
+        \"id\": 5,
+        \"name\": \"درب های گرد\"
+    },
+    {
+        \"id\": 6,
+        \"name\": \"درب های تاشو \"
+    },
+    {
+        \"id\": 7,
+        \"name\": \"درب های گردان\"
+    }
+]</string>
+</resources>

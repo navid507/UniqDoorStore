@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".Main.Fragment.CategoryFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_normal"
+        android:text="@string/category_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_header2"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginBottom="@dimen/padding_large"
+        android:layout_marginLeft="@dimen/padding_xlarge"
+        android:layout_marginRight="@dimen/padding_xlarge"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@color/blue" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/ac_pv_cat"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:alpha="0.14"-->
+        <!--android:background="@drawable/back_arghavan" />-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ac_lv_cat"
+            android:layout_width="264dp"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl"
+            android:touchscreenBlocksFocus="false"
+            app:layoutManager="GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/lele_cat" />
+
+        <TextView
+            android:id="@+id/ac_tv_noresult"
+            style="@style/listviewstyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/red"
+            android:textSize="26dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
