@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Sefaresh_fact {
     private int PayType = 0, id;
     private String fdate = "";
-
+    String payTypeStr, payValueStr;
 
     public static Sefaresh_fact parseFactor(JSONObject object) {
         Sefaresh_fact sefareshFact = new Sefaresh_fact();
@@ -25,6 +25,13 @@ public class Sefaresh_fact {
             if (object.has("fdate")) {
                 sefareshFact.fdate = object.getString("fdate");
             }
+            if (object.has("PayTypeShow")) {
+                sefareshFact.payTypeStr = object.getString("PayTypeShow");
+            }
+            if (object.has("PayableShow")) {
+                sefareshFact.payValueStr = object.getString("PayableShow");
+            }
+
         } catch (Exception err) {
 
         }
@@ -58,4 +65,19 @@ public class Sefaresh_fact {
         this.fdate = fdate;
     }
 
+    public String getPayTypeStr() {
+        return payTypeStr;
+    }
+
+    public void setPayTypeStr(String payTypeStr) {
+        this.payTypeStr = payTypeStr;
+    }
+
+    public String getPayValueStr() {
+        return payValueStr;
+    }
+
+    public void setPayValueStr(String payValueStr) {
+        this.payValueStr = payValueStr;
+    }
 }

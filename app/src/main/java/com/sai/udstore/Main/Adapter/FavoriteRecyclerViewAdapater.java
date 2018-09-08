@@ -63,7 +63,7 @@ public class FavoriteRecyclerViewAdapater extends RecyclerView.Adapter<FavoriteR
             holder.DpriceTV.setText(cp.getDprice());
 
 
-            if (cp.getDprice().length() < 2) {
+            if (!cp.getDprice().equals("1")) {
                 holder.DpriceTV.setVisibility(View.GONE);
             }
             UF.loadandsave(context, "", "", holder.imageIV, cp.getImage(), mImageThumbSize, mImageThumbSize, R.drawable.logo, R.drawable.logo);

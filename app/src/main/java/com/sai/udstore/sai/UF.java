@@ -501,8 +501,8 @@ public class UF {
         try {
             Category s_cat = new Category();
             s_cat.setName("سیستم");
-            s_cat.setPU_Gruop(-1);
-            s_cat.setPU_Type(2);
+            s_cat.setPU_Type(-1);
+            s_cat.setPU_Gruop(2);
             s_cat.setId(1);
             s_cat.setParent_id(-1);
             s_cat.setType(1);
@@ -510,8 +510,8 @@ public class UF {
 
             Category cat = new Category();
             cat.setName("لوازم یدکی");
-            cat.setPU_Gruop(-1);
-            cat.setPU_Type(3);
+            cat.setPU_Type(6);
+            cat.setPU_Gruop(3);
             cat.setId(2);
             cat.setParent_id(-1);
             cat.setType(0);

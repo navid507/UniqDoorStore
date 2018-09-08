@@ -4,40 +4,40 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_asdads"
+        android:icon="@drawable/ic_home_blue"
         android:title="@string/nav_home"
         />
     <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_sfsdf"
+        android:icon="@drawable/ic_nav_profile"
         android:title="@string/nav_profile" />
     <item
         android:id="@+id/nav_products"
-        android:icon="@drawable/ic_sfsdf"
+        android:icon="@drawable/ic_nav_daste_bandi"
         android:title="@string/nav_products" />
     <item
         android:id="@+id/nav_order"
-        android:icon="@drawable/ic_sfsdf"
+        android:icon="@drawable/ic_nav_dollar"
         android:title="@string/nav_orders"
         android:visible="false"/>
     <item
         android:id="@+id/nav_history"
-        android:icon="@drawable/ic_sfsdf"
+        android:icon="@drawable/ic_nav_invoice"
         android:title="@string/nav_history" />
 
     <item
         android:id="@+id/nav_downloads"
-        android:icon="@drawable/ic_sfsdf"
+        android:icon="@drawable/ic_nav_download"
         android:title="@string/nav_download" />
     <item
         android:id="@+id/nav_contact_us"
-        android:icon="@drawable/ic_sfsdf"
+        android:icon="@drawable/ic_nav_contact_us"
         android:title="@string/nav_contact_us"
         android:visible="false"/>
     <item
         android:id="@+id/nav_about_us"
-        android:icon="@drawable/ic_sfsdf"
-        android:title="@string/nav_about_us" />
+        android:icon="@drawable/ic_nav_about_us"
+        android:title="@string/nav_contact_us" />
 
     <item
         android:id="@+id/nav_exit"

@@ -30,6 +30,8 @@ import com.sai.udstore.sai.UF;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.app.Activity.RESULT_OK;
+
 public class CategoryFragment extends Fragment {
 
     private MainActivity activity = null;
@@ -296,4 +298,6 @@ public class CategoryFragment extends Fragment {
         activity.startActivityForResult(posi, Settings.Activity.ProductList);
 
     }
+
+
 }

@@ -56,7 +56,7 @@ public class InvoiceEditActivity extends AppCompatActivity {
 
         nameTV.setText(sefaresh.getName());
         priceTV.setText(UF.getPriceFormat(sefaresh.getPrice(), "fa") + "ریال");
-        if (sefaresh.getDiscount().equals("0")) {
+        if (sefaresh.getDiscount().equals("1")) {
             offTV.setText(UF.getPriceFormat(App.userProfile.getDiscount(), "fa") + "%");
         } else {
             offTV.setText("ندارد");
@@ -138,13 +138,15 @@ public class InvoiceEditActivity extends AppCompatActivity {
     private void updateFinalPrice() {
         TextView finalPriceTV = findViewById(R.id.apa_tv_prd_price_final);
         int num = getNum();
-        int finalPrice = 0;
+        double finalPrice = 0;
 
         try {
-            if (sefaresh.getDiscount().equals("0")) {
+            if (sefaresh.getDiscount().equals("1")) {
                 String num_str = numET.getText().toString();
                 int off = Integer.valueOf(App.userProfile.getDiscount());
-                finalPrice = Integer.valueOf(sefaresh.getPrice()) * (100 - off) / 100 * num;
+                double priceOne = Integer.valueOf(sefaresh.getPrice());
+                finalPrice = priceOne * (100 - off) * num / 100;
+
             } else {
                 String num_str = numET.getText().toString();
                 finalPrice = Integer.valueOf(sefaresh.getPrice()) * num;
@@ -154,7 +156,7 @@ public class InvoiceEditActivity extends AppCompatActivity {
             finalPrice = Integer.valueOf(sefaresh.getPrice()) * num;
 
         }
-        finalPriceTV.setText(UF.getPriceFormat(finalPrice, "fa") + " ریال");
+        finalPriceTV.setText(UF.getPriceFormat((int) finalPrice, "fa") + " ریال");
 
     }
 

@@ -24,7 +24,7 @@
     <string name="error_invalid_mobile">لطفاً تلفن همراه را صحیح وارد نمایید</string>
     <string name="entenr_verify">لطفا کد تایید دریافتی را وارد نمایید</string>
     <string name="product_list">لیست محصولات</string>
-    <string name="pro_list">لیست کامل</string>
+    <string name="pro_list">بیشتر</string>
     <string name="profile_text">آقای %s خوش آمدید</string>
     <string name="etebar">اعتبار:</string>
     <string name="off">میزان تخفیف:</string>
@@ -52,6 +52,9 @@
 این شرکت به مدیریت آقای هاشم شیشه چی با 13 سال سابقه کاری درزمینه درب های اتوماتیک شروع به فعالیت کرده است . در حال حاضر این شرکت صادرات درب های اتوماتیک را به کشور های حاشیه خلیج فارس انجام داده و روز به روز در حال توسعه و پوشش دهی مناطق مختلف ایران می باشد.
 
     </string>
+    <string name="contact_us">مشهد-بلوار آزادی 127- چهارراه چهارم سمت راست پلاک 18/1 شرکت درب های اتوماتیک شیشه چی \n\u2022
+    کدپستی: 9198171448 \n\u2022
+        تلفن تماس 36518000-051     </string>
 
 
     <string name="advantages" formatted="true">
@@ -93,6 +96,7 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="factor_failed"> سفارش با خطا مواجه شد</string>
 
     <string name="factor_registered" formatted="true">سفارش شما با شماره فاکتور %s ثبت گردید.</string>
     <string name="see_orders">پیگیری سفارش</string>

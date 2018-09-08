@@ -128,6 +128,7 @@ public class InvoicesHistoryFragment extends Fragment implements FactorsRecycler
                     EB_Preference preference = new EB_Preference(getContext());
                     User userP = preference.User();
                     order.put("username", userP.getUsername());
+                    order.put("password", userP.getPassword());
                     String result = Web.send(Settings.Urls.GetOrders, order.toString());
 //                    String result = Web.send("http://ws.atitravel.ir/ATIOperation.svc/api/package/ListPackage", "");
 
@@ -139,37 +140,42 @@ public class InvoicesHistoryFragment extends Fragment implements FactorsRecycler
                             JSONObject sef = jsonArray.getJSONObject(i);
                             Sefaresh_fact sefareshFact = Sefaresh_fact.parseFactor(sef);
                             sefaresh_facts.add(sefareshFact);
-
                         }
+                        if (isAdded()) {
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    ordersRecyclerViewAdapater.setList(sefaresh_facts);
+                                    llpb.setVisibility(View.GONE);
+                                }
+                            });
+                        }
+                    } else {
+                        if (isAdded()) {
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    pb.setVisibility(View.GONE);
+                                    pbErr.setVisibility(View.VISIBLE);
+                                    pbErr.setText("عدم وجود سفارش");
+                                    pbRetry.setVisibility(View.VISIBLE);
+
+                                }
+                            });
+                        }
+                    }
+                } catch (Exception e) {
+                    if (isAdded()) {
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 ordersRecyclerViewAdapater.setList(sefaresh_facts);
-                                llpb.setVisibility(View.GONE);
-                            }
-                        });
-                    } else {
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                pb.setVisibility(View.GONE);
                                 pbErr.setVisibility(View.VISIBLE);
-                                pbErr.setText("عدم وجود سفارش");
+                                pb.setVisibility(View.GONE);
                                 pbRetry.setVisibility(View.VISIBLE);
-
                             }
                         });
                     }
-                } catch (Exception e) {
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            ordersRecyclerViewAdapater.setList(sefaresh_facts);
-                            pbErr.setVisibility(View.VISIBLE);
-                            pb.setVisibility(View.GONE);
-                            pbRetry.setVisibility(View.VISIBLE);
-                        }
-                    });
                 }
 
             }

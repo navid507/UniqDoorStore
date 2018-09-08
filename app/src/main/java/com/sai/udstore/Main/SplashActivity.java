@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -57,84 +58,69 @@ public class SplashActivity extends Activity {
         db = new DataBase(getApplicationContext());
         userp = prefrence.User();
 //        userp.setRegState(Settings.Register_State.OK);
-//        message = (TextView) findViewById(R.id.as_tv_message_splash);
-        mProgressView = (ProgressBar) findViewById(R.id.as_pb_splash);
+        mProgressView = findViewById(R.id.as_pb_splash);
 
-//        message.setTypeface(hamase);
         doLogin();
-//        updateNews();
-
-        //********************************Notification********************************
-//
-//        Intent alarmIntent = new Intent(SplashActivity.this, NotificationPublisher.class);
-//        PendingIntent pendingIntent = PendingIntent.getBroadcast(SplashActivity.this, 0, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-//        AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-//        manager.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(), pendingIntent);
-
-//        Intent alarmIntent = new Intent(SplashActivity.this, NotificationPublisher.class);
-//        PendingIntent pendingIntent = PendingIntent.getBroadcast(SplashActivity.this, 0, alarmIntent, 0);
-//        AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-//        Calendar calendar = Calendar.getInstance();
-//        calendar.setTimeInMillis(System.currentTimeMillis());
-//        calendar.set(Calendar.HOUR_OF_DAY, Settings.HOUR);
-//        calendar.set(Calendar.MINUTE, Settings.MINUTE);
-//        calendar.set(Calendar.SECOND, Settings.Second);
-//        //manager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-//        manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
     }
 
     boolean isNews = false, isCats = true, isOffers = true, isTeam = true, isLogin = false, isCerts = true, isProduxts;
 
     private void doLogin() {
-        if (mAuthTask == null) {
-            int regstate = userp.getRegState();
-            String uniq = android.provider.Settings.Secure.getString(this.getContentResolver(),
-                    android.provider.Settings.Secure.ANDROID_ID);
-            if (regstate == Settings.Register_State.OK) {
-                mAuthTask = new LoginUserTask(userp.getUsername(), userp.getPassword(), uniq, Settings.Urls.Login);
-                mAuthTask.execute((Void) null);
-            } else {
-                isLogin = true;
-                showsliderontime();
-                updateNews();
+        findViewById(R.id.as_ll_retry).setVisibility(View.INVISIBLE);
+        showProgress(true);
+        if (UF.Check_internet(getApplicationContext())) {
+            if (mAuthTask == null) {
+                int regstate = userp.getRegState();
+                String uniq = android.provider.Settings.Secure.getString(this.getContentResolver(),
+                        android.provider.Settings.Secure.ANDROID_ID);
+                if (regstate == Settings.Register_State.OK) {
+                    mAuthTask = new LoginUserTask(userp.getUsername(), userp.getPassword(), uniq, Settings.Urls.Login);
+                    mAuthTask.execute((Void) null);
+                } else {
+//                    isLogin = true;
+                    startApp();
+//                    updateNews();
+                }
             }
+        } else {
+            showProgress(false);
+            findViewById(R.id.as_ll_retry).setVisibility(View.VISIBLE);
         }
     }
 
+    public void doRetry(View v) {
+//        findViewById(R.id.as_ll_retry).setVisibility(View.INVISIBLE);
+        doLogin();
+    }
+
     private void updateNews() {
-
-
         showProgress(true);
         if (UF.Check_internet(getApplicationContext())) {
 
             if (mFinderNewsTask == null) {
                 mFinderNewsTask = new GetNewsTask();
                 mFinderNewsTask.execute((Void) null);
-
             }
             if (mCatTask == null) {
                 mCatTask = new GetCatsTask();
                 mCatTask.execute((Void) null);
             }
-//            if (mOffersTask == null) {
-//                mOffersTask = new GetOffersTask();
-//                mOffersTask.execute((Void) null);
-//            }
-
             if (mProductTask == null) {
                 mProductTask = new GetProductsTask();
                 mProductTask.execute((Void) null);
             }
-
         } else {
-            isNews = true;
-            isCats = true;
-            isProduxts = true;
-            isOffers = true;
-            isTeam = true;
-            isCerts = true;
-            isLogin = true;
-            showsliderontime();
+
+            LinearLayout ell = findViewById(R.id.as_ll_retry);
+            ell.setVisibility(View.VISIBLE);
+//            isNews = true;
+//            isCats = true;
+//            isProduxts = true;
+//            isOffers = true;
+//            isTeam = true;
+//            isCerts = true;
+//            isLogin = true;
+//            startApp();
         }
     }
 
@@ -158,7 +144,6 @@ public class SplashActivity extends Activity {
                 }
             }, delay);
         }
-
     }
 
     @Override
@@ -166,7 +151,6 @@ public class SplashActivity extends Activity {
         if (requestCode == Settings.Activity.Register) {
             if (resultCode == RESULT_OK) {
                 doLogin();
-
             } else {
                 finish();
             }
@@ -179,43 +163,12 @@ public class SplashActivity extends Activity {
         // TODO: 15/07/2018  oncomment followings
         if (App.userProfile != null) {
             startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            finish();
         } else {
             startActivityForResult(new Intent(SplashActivity.this, RegisterActivity.class), Settings.Activity.Register);
         }
     }
 
-//    public class FindNewsTask extends AsyncTask<Void, Void, Boolean> {
-//
-//        FindNewsTask() {
-//        }
-//
-//        @Override
-//        protected Boolean doInBackground(Void... params) {
-//            try {
-//                String response = Web.send(Settings.Urls.News, "");
-//                return UF.UpdateNews(response);
-//            } catch (Exception err) {
-//                return false;
-//            }
-//        }
-//
-//        @Override
-//        protected void onPostExecute(final Boolean success) {
-//            mFinderNewsTask = null;
-//            if (success) {
-//                isNews = true;
-//
-//            }
-//            showsliderontime();
-//
-//        }
-//
-//        @Override
-//        protected void onCancelled() {
-//            mFinderNewsTask = null;
-//            showProgress(false);
-//        }
-//    }
 
     public class GetCatsTask extends AsyncTask<Void, Void, Boolean> {
 
@@ -314,7 +267,11 @@ public class SplashActivity extends Activity {
                 js.put(Settings.Jsons.Login.uniq, m_Uniq);
 
                 String response = Web.send(url, js.toString());
-                return UF.Update_Login(response);
+                if (response != null) {
+                    return UF.Update_Login(response);
+                } else {
+                    return false;
+                }
             } catch (Exception err) {
                 return false;
             }
@@ -323,11 +280,10 @@ public class SplashActivity extends Activity {
         @Override
         protected void onPostExecute(final Boolean success) {
             if (!success) {
-
+                startApp();
             }
             mAuthTask = null;
             isLogin = true;
-            showsliderontime();
             updateNews();
         }
 

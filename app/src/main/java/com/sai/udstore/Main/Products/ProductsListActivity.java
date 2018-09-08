@@ -14,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sai.udstore.DataBase.DataBase;
 import com.sai.udstore.DataBase.Models.Product;
@@ -74,7 +75,13 @@ public class ProductsListActivity extends AppCompatActivity implements IProductC
     }
 
     private void setHeader() {
-        (findViewById(R.id.main_orders)).setVisibility(View.GONE);
+        (findViewById(R.id.main_orders)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setResult(RESULT_OK);
+                finish();
+            }
+        });
         (findViewById(R.id.main_toggleNavigation)).setVisibility(View.GONE);
     }
 
@@ -157,7 +164,15 @@ public class ProductsListActivity extends AppCompatActivity implements IProductC
         intent.putExtra("image", prds.get(pos).getImage());
 
 
-        startActivity(intent);
+        startActivityForResult(intent, Settings.Activity.BuyProductActivity);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            Toast.makeText(getApplicationContext(), "با موفقیت به سبد اضافه گردید", Toast.LENGTH_LONG).show();
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     /**

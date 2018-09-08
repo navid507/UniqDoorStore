@@ -1,6 +1,7 @@
 package com.sai.udstore.Main.Order;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,14 +38,14 @@ public class SendOrderActivity extends AppCompatActivity {
     }
 
     public void sendByCredit(View v) {
-        sendOrder("true");
+        sendOrder(1);
     }
 
     public void sendByBank(View v) {
-        sendOrder("false");
+        sendOrder(0);
     }
 
-    private void sendOrder(final String credit) {
+    private void sendOrder(final int credit) {
 
         String comment = "", type = "";
         comment = addrET.getText().toString();
@@ -68,7 +69,7 @@ public class SendOrderActivity extends AppCompatActivity {
                     User userP = preference.User();
                     order.put("username", userP.getUsername());
                     order.put("password", userP.getPassword());
-                    order.put("UserCredit", credit);
+                    order.put("UseCredit", credit);
                     order.put("remark", "");
                     String result = Web.send(Settings.Urls.RegOrder, order.toString());
 
@@ -82,14 +83,26 @@ public class SendOrderActivity extends AppCompatActivity {
                         int err = resObj.getInt("ErrorCode");
                         if (err == 0) {
                             String fish = resObj.getString("Result");
+                            if (credit != 1) {
+                                String url = resObj.getString("ResultMessage");
+                                if (url.length() > 10) {
+                                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                                    startActivity(browserIntent);
+                                }
+                            }
+
                             Intent res = new Intent();
                             res.putExtra("factor", fish);
                             setResult(RESULT_OK, res);
-//                            setResult(RESULT_OK);
+                            finish();
+                        }else
+                        {
+                            Intent res = new Intent();
+                            String errMSG = resObj.getString("ResultMessage");
+                            res.putExtra("errMSG", errMSG);
+                            setResult(-15, res);
                             finish();
                         }
-//                       Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-//                        startActivity(browserIntent);
 
                     }
                 } catch (Exception err) {

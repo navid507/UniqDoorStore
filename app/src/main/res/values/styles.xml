@@ -6,7 +6,6 @@
         <item name="colorAccent">@color/colorAccentSecondary</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
         <item name="android:colorForeground">@color/back_light</item>
     </style>
 

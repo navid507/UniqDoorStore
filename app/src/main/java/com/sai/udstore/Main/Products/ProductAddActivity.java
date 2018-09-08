@@ -39,11 +39,10 @@ public class ProductAddActivity extends AppCompatActivity {
 
         nameTV.setText(ProductActivity.prd.getName());
         priceTV.setText(UF.getPriceFormat(ProductActivity.prd.getPrice(), "fa") + "ریال");
-        if (ProductActivity.prd.getDprice().equals("0")) {
+        if (ProductActivity.prd.getDprice().equals("1")) {
             offTV.setText(UF.getPriceFormat(App.userProfile.getDiscount(), "fa") + "%");
         } else {
             offTV.setText("ندارد");
-
         }
         getOrder();
         if (order != null) {
@@ -93,6 +92,7 @@ public class ProductAddActivity extends AppCompatActivity {
 //                        ProductActivity.prd.getTax1(), ProductActivity.prd.getCode(), ProductActivity.prd.getUnit(),
 //                        ProductActivity.prd.getImage(), num);
                 db.close();
+                setResult(RESULT_OK);
                 finish();
 
             } catch (Exception err) {
@@ -137,11 +137,13 @@ public class ProductAddActivity extends AppCompatActivity {
     private void updateFinalPrice() {
         TextView finalPriceTV = findViewById(R.id.apa_tv_prd_price_final);
         int num = getNum();
-        int finalPrice = 0;
+        double finalPrice = 0;
         try {
-            if (ProductActivity.prd.getDprice().equals("0")) {
+            if (ProductActivity.prd.getDprice().equals("1")) {
                 int off = Integer.valueOf(App.userProfile.getDiscount());
-                finalPrice = Integer.valueOf(ProductActivity.prd.getPrice()) * (100 - off) / 100 * num;
+                double priceOne = Integer.valueOf(ProductActivity.prd.getPrice());
+
+                finalPrice = priceOne * (100 - off) * num / 100;
             } else {
                 finalPrice = Integer.valueOf(ProductActivity.prd.getPrice()) * num;
 
@@ -150,7 +152,7 @@ public class ProductAddActivity extends AppCompatActivity {
             finalPrice = Integer.valueOf(ProductActivity.prd.getPrice()) * num;
 
         }
-        finalPriceTV.setText(UF.getPriceFormat(finalPrice, "fa") + " ریال");
+        finalPriceTV.setText(UF.getPriceFormat((int) finalPrice, "fa") + " ریال");
 
     }
 

@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/padding_xlarge"
                 android:gravity="center"
-                android:text="درباره ما"
+                android:text="ارتباط با ما"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_header2" />
 

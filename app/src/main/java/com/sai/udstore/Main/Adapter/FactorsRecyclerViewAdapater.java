@@ -58,8 +58,8 @@ public class FactorsRecyclerViewAdapater extends RecyclerView.Adapter<FactorsRec
             }
             holder.dateTV.setText(cp.getFdate());
             holder.rowTV.setText(String.valueOf(position + 1));
-//            holder.paymentTV.setText(cp.ge());
-//            holder.priceTV.setText(cp.getTotal_price());
+            holder.paymentTV.setText(cp.getPayTypeStr());
+            holder.priceTV.setText(cp.getPayValueStr());
 
         }
     }

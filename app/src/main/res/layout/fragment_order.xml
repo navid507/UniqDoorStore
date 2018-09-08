@@ -4,9 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
-
     tools:context="com.sai.udstore.Main.Order.InvoiceFragment">
 
+
+    <ProgressBar
+        android:id="@+id/fp_pb_loading"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center" />
 
     <LinearLayout
         android:id="@+id/fo_mainll"

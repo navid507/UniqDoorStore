@@ -51,7 +51,7 @@ public class OrdersRecyclerViewAdapater extends RecyclerView.Adapter<OrdersRecyc
 
             holder.nameView.setText(cp.getName());
 //            holder.priceTV.setText(context.getString(R.string.article_number) + cp.getCode());
-            if (cp.getDiscount().equals("0")) {
+            if (cp.getDiscount().equals("1")) {
                 holder.discountTV.setText(UF.getPriceFormat(App.userProfile.getDiscount(), "fa") + "%");
             } else {
                 holder.discountTV.setText("ندارد");

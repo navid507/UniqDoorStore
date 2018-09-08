@@ -8,7 +8,7 @@ public class Product {
     private String Name, Remark;
     private String Image;
     private boolean state, fav;
-
+    private int isOffer;
     private String Price;
     private String Dprice;
 
@@ -16,9 +16,11 @@ public class Product {
     public static Product getProduct(JSONObject qu) {
         Product cp = new Product();
         try {
-            if (qu.has("id"))
-            {
+            if (qu.has("id")) {
                 cp.setId(qu.getInt("id"));
+            }
+            if (qu.has("FirstPage")) {
+                cp.setIsOffer(qu.getInt("FirstPage"));
             }
 
             if (qu.has("name")) {
@@ -46,6 +48,14 @@ public class Product {
 
         }
         return cp;
+    }
+
+    public int getIsOffer() {
+        return isOffer;
+    }
+
+    public void setIsOffer(int isOffer) {
+        this.isOffer = isOffer;
     }
 
     public boolean isFav() {

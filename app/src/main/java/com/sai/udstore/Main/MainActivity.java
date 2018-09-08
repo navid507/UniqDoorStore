@@ -188,7 +188,12 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.END)) {
-            drawer.closeDrawer(GravityCompat.END);
+            if (oldCurrentTimeMillis + time_interval > System.currentTimeMillis()) {
+                System.exit(0);
+            } else {
+                drawer.closeDrawer(GravityCompat.END);
+            }
+
         } else {
 //            if (curFragment == Settings.Fragments.Product) {
             if (fragment instanceof CategoryFragment) {
@@ -438,6 +443,11 @@ public class MainActivity extends AppCompatActivity
                     doRegister();
                 }
                 break;
+            case Settings.Activity.ProductList:
+                if (resultCode == RESULT_OK) {
+                    displayView(Settings.Fragments.Order, "", "", "");
+                }
+                return;
         }
         if (curFragment == Settings.Fragments.Product) {
             if (requestCode == Settings.Activity.Products) {

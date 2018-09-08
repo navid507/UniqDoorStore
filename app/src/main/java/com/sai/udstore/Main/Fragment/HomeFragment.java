@@ -144,59 +144,71 @@ public class HomeFragment extends Fragment {
     private void populateOffersHSV() {
 //        toursHSVLL.removeAllViews();
         int size = App.products.size();
-        if (size > 8) {
-            size = 8;
+//        if (size > 8) {
+//            size = 8;
+//        }
+//        for (int i = 0; i < size; i++) {
+//            final int position = i;
+//            final int scroll_new_id = App.products.get(i).getId();
+//            final Product f = App.products.get(i);
+//
+//        }
+
+        for (Product p: App.products)
+        {
+            if (p.getIsOffer() == 0)
+            {
+                addToHSV(p);
+            }
         }
-        for (int i = 0; i < size; i++) {
-            final int position = i;
-            final int scroll_new_id = App.products.get(i).getId();
-            LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            final View subView = layoutInflater.inflate(R.layout.lele_product_new, null);
+    }
 
-            final ImageView img = subView.findViewById(R.id.fti_iv_image);
-            final TextView name_new = subView.findViewById(R.id.fti_tv_title);
-            final TextView price_new = subView.findViewById(R.id.fti_tv_price);
-            final Product f = App.products.get(i);
+    private void addToHSV(final Product f) {
+        LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final View subView = layoutInflater.inflate(R.layout.lele_product_new, null);
 
-            name_new.setTypeface(App.vazirFont);
-            price_new.setTypeface(App.vazirFont);
+        final ImageView img = subView.findViewById(R.id.fti_iv_image);
+        final TextView name_new = subView.findViewById(R.id.fti_tv_title);
+        final TextView price_new = subView.findViewById(R.id.fti_tv_price);
+
+        name_new.setTypeface(App.vazirFont);
+        price_new.setTypeface(App.vazirFont);
 
 //            String pathUrl1 = String.format(Locale.US, Settings.Urls.imgproduct,f.getImage());
 //            UF.loadandsave(getActivity(), Settings.Path.book, f.getImage(), img, pathUrl1, mImageThumbSize, mImageThumbSize, R.drawable.book_default, R.drawable.book_default);
 
-            Picasso.with(getContext())
-                    .load(f.getImage())
-                    .error(R.drawable.logo)
-                    .into(img, new Callback() {
-                        @Override
-                        public void onSuccess() {
+        Picasso.with(getContext())
+                .load(f.getImage())
+                .error(R.drawable.logo)
+                .into(img, new Callback() {
+                    @Override
+                    public void onSuccess() {
 
-                        }
+                    }
 
-                        @Override
-                        public void onError() {
-                            // Try again online if cache failed
-                        }
-                    });
+                    @Override
+                    public void onError() {
+                        // Try again online if cache failed
+                    }
+                });
 
 
-            name_new.setText(f.getName());
-            price_new.setText(UF.getPriceFormat(f.getPrice(),"fa"));
+        name_new.setText(f.getName());
+        price_new.setText(UF.getPriceFormat(f.getPrice(), "fa"));
 
-            toursHSVLL.addView(subView);
+        toursHSVLL.addView(subView);
 
-            subView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        subView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-                    Intent i = new Intent(getActivity(), ProductAddActivity.class);
-                    ProductActivity.prd = f;
+                Intent i = new Intent(getActivity(), ProductAddActivity.class);
+                ProductActivity.prd = f;
 //                    i.putExtra("pos", f.getId());
 //                    i.putExtra("from", Settings.From.OfferList);
-                    startActivity(i);
-                }
-            });
-        }
+                startActivity(i);
+            }
+        });
     }
 
     // For news

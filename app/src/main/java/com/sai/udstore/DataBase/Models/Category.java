@@ -34,12 +34,15 @@ public class Category {
             if (qu.has(Settings.Jsons.Categories.name)) {
                 cp.setName(qu.getString(Settings.Jsons.Categories.name));
             }
+
             if (qu.has(Settings.Jsons.Categories.image)) {
                 cp.setImage(qu.getString(Settings.Jsons.Categories.image));
             }
+
             if (qu.has(Settings.Jsons.Categories.pid)) {
                 cp.setParent_id(qu.getInt(Settings.Jsons.Categories.pid));
             }
+
         } catch (Exception err) {
 
         }
@@ -130,18 +133,18 @@ public class Category {
         ArrayList<Category> cats = new ArrayList<>();
         String catsStr = context.getString(R.string.json_cat);
         try {
-             JSONArray gs = new JSONArray(context.getString(R.string.json_cat));
+            JSONArray gs = new JSONArray(context.getString(R.string.json_cat));
             for (int i = 0; i < gs.length(); i++) {
                 Category cp = new Category();
                 JSONObject qu = gs.getJSONObject(i);
                 if (qu.has(Settings.Jsons.Categories.id)) {
-                    cp.setPU_Gruop(qu.getInt(Settings.Jsons.Categories.id));
+                    cp.setPU_Type(qu.getInt(Settings.Jsons.Categories.id));
                 }
 
                 if (qu.has("name")) {
                     cp.setName(qu.getString("name"));
                 }
-                cp.setPU_Type(2);
+                cp.setPU_Gruop(2);
                 cp.setType(0);
                 cp.setId(10 + i);
                 cp.setParent_id(1);
@@ -149,7 +152,7 @@ public class Category {
 
             }
         } catch (Exception err) {
-            Log.d("in Create Groups: ",err.getMessage());
+            Log.d("in Create Groups: ", err.getMessage());
 
         }
 

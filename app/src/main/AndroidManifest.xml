@@ -33,34 +33,32 @@
             android:name="com.sai.udstore.Main.MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.sai.udstore.Main.Register.RegisterActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.sai.udstore.Main.Register.VerifyActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.sai.udstore.Main.Register.RegisterAlertActivity"
-            android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme.Dialog" />
         <activity
             android:name="com.sai.udstore.Main.ProductsActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.sai.udstore.Main.Products_moreActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.sai.udstore.Main.Register.SignUpActivity"
             android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.sai.udstore.Main.BuyProductsActivity"
-            android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme.Dialog" />
         <activity
             android:name="com.sai.udstore.Main.Products.ProductAddActivity"
@@ -71,11 +69,16 @@
         <activity
             android:name="com.sai.udstore.Main.Order.SendOrderActivity"
             android:theme="@style/AppTheme.Dialog" />
-        <activity android:name="com.sai.udstore.Main.Products.ProductsListActivity" />
-        <activity android:name="com.sai.udstore.Main.Products.ProductActivity" />
+        <activity
+            android:name="com.sai.udstore.Main.Products.ProductsListActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name="com.sai.udstore.Main.Products.ProductActivity"
+            android:screenOrientation="sensorPortrait" />
         <activity
             android:name="com.sai.udstore.Main.Order.InvoiceDetailsActivity"
-            android:label="@string/title_activity_invoice_details"></activity>
+            android:label="@string/title_activity_invoice_details"
+            android:screenOrientation="sensorPortrait"></activity>
     </application>
 
 </manifest>

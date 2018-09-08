@@ -74,12 +74,12 @@ public class AboutFragment extends Fragment {
         comment.setTypeFace(vazir);
         comment.setLineSpacing(14);
         comment.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        comment.setText(R.string.about);
+        comment.setText(R.string.contact_us);
 
         title_program.setTypeface(App.appFont);
 //        site_program.setTypeface(bhoma);
 
-        comment.setText(getResources().getString(R.string.about));
+//        comment.setText(getResources().getString(R.string.about));
 //        comment.setLineSpacing(16);
 //        comment.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
 
