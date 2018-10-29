@@ -39,7 +39,6 @@ public class SplashActivity extends Activity {
     private EB_Preference prefrence;
     private LastUpdate lastUpdate;
     private ProgressBar mProgressView;
-    private Typeface hamase;
     private TextView message;
     private DataBase db;
     private LoginUserTask mAuthTask = null;
@@ -50,7 +49,6 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        hamase = Typeface.createFromAsset(getAssets(), "font/brb.ttf");
         prefrence = new EB_Preference(getApplicationContext());
         lastUpdate = prefrence.getLastUpdate();
         // TODO: 07/04/2018  remove this 

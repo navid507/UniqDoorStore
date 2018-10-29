@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.sai.udstore.DataBase.Models.Message;
 import com.sai.udstore.DataBase.Models.News;
+import com.sai.udstore.Main.App;
 import com.sai.udstore.Main.MainActivity;
 import com.sai.udstore.Main.MessageActivity;
 import com.sai.udstore.R;
@@ -27,7 +28,6 @@ public class MessageRecyclerViewAdapter extends RecyclerView.Adapter<MessageRecy
 
     private List<News> lstMessage;
     private Context context;
-    private Typeface vazir;
     private int mImageThumbSize;
     private MainActivity mainActivity;
 
@@ -35,7 +35,6 @@ public class MessageRecyclerViewAdapter extends RecyclerView.Adapter<MessageRecy
         this.mainActivity = mainActivity;
         lstMessage = items;
         context = mc;
-        vazir = Typeface.createFromAsset(context.getAssets(), "font/vazir.ttf");
         mImageThumbSize = mc.getResources().getDimensionPixelSize(R.dimen.image_thumbnail_size);
     }
 
@@ -89,8 +88,8 @@ public class MessageRecyclerViewAdapter extends RecyclerView.Adapter<MessageRecy
             contant = (TextView) view1.findViewById(R.id.am_tv_contant_message);
             more = (Button) view1.findViewById(R.id.am_btn_more_message);
 
-            contant.setTypeface(vazir);
-            more.setTypeface(vazir);
+            contant.setTypeface(App.appFont);
+            more.setTypeface(App.appFont);
         }
 
         @Override

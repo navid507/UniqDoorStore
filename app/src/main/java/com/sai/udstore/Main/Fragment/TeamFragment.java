@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.sai.udstore.DataBase.Daos.Team_Dao;
 import com.sai.udstore.DataBase.DataBase;
 import com.sai.udstore.DataBase.Models.Team;
+import com.sai.udstore.Main.App;
 import com.sai.udstore.Main.MainActivity;
 import com.sai.udstore.R;
 import com.sai.udstore.Settings;
@@ -45,8 +46,6 @@ public class TeamFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_team, container, false);
         gridView = (GridView) rootView.findViewById(R.id.ft_grid_team);
         TextView title = (TextView) rootView.findViewById(R.id.ft_tv_title_team);
-        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "font/brb.ttf");
-//        title.setTypeface(tf);
         DataBase db = new DataBase(getActivity());
         db.open();
         Team_Dao plda = db.getTeam_Dao();
@@ -110,8 +109,6 @@ public class TeamFragment extends Fragment {
 
             img = (ImageView) convertView.findViewById(R.id.asg_image);
             TextView name = (TextView) convertView.findViewById(R.id.asg_name);
-            Typeface tf_c = Typeface.createFromAsset(getActivity().getAssets(), "font/curves.ttf");
-            name.setTypeface(tf_c);
             Team cf = teams.get(pos);
             name.setText(cf.getName());
 

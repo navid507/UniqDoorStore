@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.sai.udstore.Main.App;
 import com.sai.udstore.Prefrence.Daos.User;
 import com.sai.udstore.Prefrence.EB_Preference;
 import com.sai.udstore.R;
@@ -18,14 +19,12 @@ public class RegisterAlertActivity extends AppCompatActivity {
     private TextView message;
     private EB_Preference prefrence;
     private User userp;
-    private Typeface vazir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_alert);
 
-        vazir = Typeface.createFromAsset(getAssets(), "font/vazir.ttf");
         prefrence = new EB_Preference(getApplicationContext());
         userp = prefrence.User();
 
@@ -33,9 +32,9 @@ public class RegisterAlertActivity extends AppCompatActivity {
         cancel = (Button) findViewById(R.id.ar_btn_no_register);
         message = (TextView) findViewById(R.id.ar_tv_message_register);
 
-        ok.setTypeface(vazir);
-        cancel.setTypeface(vazir);
-        message.setTypeface(vazir);
+        ok.setTypeface(App.appFont);
+        cancel.setTypeface(App.appFont);
+        message.setTypeface(App.appFont);
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override

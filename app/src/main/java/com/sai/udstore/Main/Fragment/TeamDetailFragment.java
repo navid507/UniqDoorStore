@@ -22,6 +22,7 @@ import com.sai.udstore.DataBase.Daos.Team_Dao;
 import com.sai.udstore.DataBase.DataBase;
 import com.sai.udstore.DataBase.Models.Certificate;
 import com.sai.udstore.DataBase.Models.Team;
+import com.sai.udstore.Main.App;
 import com.sai.udstore.Main.MainActivity;
 import com.sai.udstore.R;
 import com.sai.udstore.Settings;
@@ -102,14 +103,11 @@ public class TeamDetailFragment extends Fragment {
             final Team cf = Stylers.get(position);
 
             TextView title = (TextView) viewLayout.findViewById(R.id.asd_name);
-            Typeface tf_c = Typeface.createFromAsset(getActivity().getAssets(), "font/curves.ttf");
-            title.setTypeface(tf_c);
+            title.setTypeface(App.appFont);
             TextView desc = (TextView) viewLayout.findViewById(R.id.asd_desc);
-            Typeface tf_b = Typeface.createFromAsset(getActivity().getAssets(), "font/brb.ttf");
-            desc.setTypeface(tf_b);
+            desc.setTypeface(App.appFont);
             TextView certi = (TextView) viewLayout.findViewById(R.id.asd_certi_str);
-            Typeface tf_t = Typeface.createFromAsset(getActivity().getAssets(), "font/br.ttf");
-            certi.setTypeface(tf_t);
+            certi.setTypeface(App.appFont);
 //			Typeface tf_te = Typeface.createFromAsset(getActivity().getAssets(), "font/tehran.ttf");
 
 
@@ -210,8 +208,7 @@ public class TeamDetailFragment extends Fragment {
             }
 
             TextView txtDesc = (TextView) convertView.findViewById(R.id.asc_desc);
-            Typeface tf_te = Typeface.createFromAsset(getActivity().getAssets(), "font/br.ttf");
-            txtDesc.setTypeface(tf_te);
+            txtDesc.setTypeface(App.appFont);
 
             txtDesc.setText(certi_Items.get(position).getCertificate());
 

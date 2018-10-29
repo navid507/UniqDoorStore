@@ -5,12 +5,15 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home_blue"
-        android:title="@string/nav_home"
-        />
+        android:title="@string/nav_home" />
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_nav_profile"
         android:title="@string/nav_profile" />
+    <item
+        android:id="@+id/nav_charge"
+        android:icon="@drawable/ic_nav_dollar"
+        android:title="@string/nav_charge" />
     <item
         android:id="@+id/nav_products"
         android:icon="@drawable/ic_nav_daste_bandi"
@@ -19,7 +22,7 @@
         android:id="@+id/nav_order"
         android:icon="@drawable/ic_nav_dollar"
         android:title="@string/nav_orders"
-        android:visible="false"/>
+        android:visible="false" />
     <item
         android:id="@+id/nav_history"
         android:icon="@drawable/ic_nav_invoice"
@@ -33,7 +36,7 @@
         android:id="@+id/nav_contact_us"
         android:icon="@drawable/ic_nav_contact_us"
         android:title="@string/nav_contact_us"
-        android:visible="false"/>
+        android:visible="false" />
     <item
         android:id="@+id/nav_about_us"
         android:icon="@drawable/ic_nav_about_us"

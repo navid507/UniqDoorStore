@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sai.udstore.Main.App;
 import com.sai.udstore.Prefrence.Daos.User;
 import com.sai.udstore.Prefrence.EB_Preference;
 import com.sai.udstore.R;
@@ -36,14 +37,12 @@ public class SignUpActivity extends AppCompatActivity {
     private EB_Preference prefrence;
     private View mProgressView;
     private User userp;
-    private Typeface vazir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        vazir = Typeface.createFromAsset(getAssets(), "font/vazir.ttf");
         prefrence = new EB_Preference(getApplicationContext());
         userp = prefrence.User();
 
@@ -57,13 +56,13 @@ public class SignUpActivity extends AppCompatActivity {
         address = (EditText) findViewById(R.id.as_tv_address_sign_up);
         tel = (EditText) findViewById(R.id.as_tv_tel_sign_up);
 
-        title_firstName.setTypeface(vazir);
-        title_lastName.setTypeface(vazir);
-        title_address.setTypeface(vazir);
-        firstName.setTypeface(vazir);
-        lastName.setTypeface(vazir);
-        address.setTypeface(vazir);
-        tel.setTypeface(vazir);
+        title_firstName.setTypeface(App.appFont);
+        title_lastName.setTypeface(App.appFont);
+        title_address.setTypeface(App.appFont);
+        firstName.setTypeface(App.appFont);
+        lastName.setTypeface(App.appFont);
+        address.setTypeface(App.appFont);
+        tel.setTypeface(App.appFont);
 
         firstName.setText(userp.getFirstName());
         lastName.setText(userp.getLastName());

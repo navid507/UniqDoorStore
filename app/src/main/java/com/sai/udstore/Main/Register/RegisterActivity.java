@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.sai.udstore.Main.App;
 import com.sai.udstore.Prefrence.Daos.User;
 import com.sai.udstore.Prefrence.EB_Preference;
 import com.sai.udstore.R;
@@ -37,7 +38,6 @@ public class RegisterActivity extends AppCompatActivity {
     private View mProgressView, pb;
     private EB_Preference prefrence;
     private User userp;
-    private Typeface vazir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,6 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
 
-        vazir = Typeface.createFromAsset(getAssets(), "font/vazir.ttf");
         prefrence = new EB_Preference(getApplicationContext());
         userp = prefrence.User();
 
@@ -58,11 +57,11 @@ public class RegisterActivity extends AppCompatActivity {
         mProgressView = findViewById(R.id.ar_pb_register);
         pb = findViewById(R.id.ar_pb);
 
-        usernameET.setTypeface(vazir);
-        title_phoneTV.setTypeface(vazir);
-        passwordET.setTypeface(vazir);
-        title_passTV.setTypeface(vazir);
-        register.setTypeface(vazir);
+        usernameET.setTypeface(App.appFont);
+        title_phoneTV.setTypeface(App.appFont);
+        passwordET.setTypeface(App.appFont);
+        title_passTV.setTypeface(App.appFont);
+        register.setTypeface(App.appFont);
 
         usernameET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

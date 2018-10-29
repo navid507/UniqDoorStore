@@ -44,20 +44,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:paddingLeft="@dimen/padding_normal"
-                android:paddingRight="@dimen/padding_normal"
-                android:orientation="horizontal">
+                android:paddingRight="@dimen/padding_normal">
 
                 <Button
                     android:id="@+id/fh_bt_products_show"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@color/transparent"
                     android:gravity="end|bottom"
                     android:text="@string/pro_list"
                     android:textColor="@color/green"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:textSize="@dimen/text_size_small"
                     android:textStyle="bold" />
 
@@ -65,8 +65,8 @@
                     android:id="@+id/fh_bt_products_list"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginRight="10dp"
+                    android:layout_weight="1"
                     android:background="@color/transparent"
                     android:gravity="start|center_vertical"
                     android:text="@string/product_list"
@@ -102,11 +102,12 @@
             </HorizontalScrollView>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:src="@drawable/image_icon" />
-
-
+                android:id="@+id/fm_iv_enamd"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/namad" />
         </LinearLayout>
     </ScrollView>
 

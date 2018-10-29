@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.sai.udstore.Main.App;
 import com.sai.udstore.Main.MainActivity;
+import com.sai.udstore.Main.Order.ChargeActivity;
 import com.sai.udstore.Prefrence.Daos.User;
 import com.sai.udstore.Prefrence.EB_Preference;
 import com.sai.udstore.R;
@@ -74,7 +75,7 @@ public class ProfileFragment extends Fragment {
 
     }
 
-    Button ordersBT, exitBT, downloadBT;
+    Button ordersBT, exitBT, downloadBT, chargeBT;
     ImageView iv;
     ProgressBar loadingPB;
 
@@ -94,7 +95,10 @@ public class ProfileFragment extends Fragment {
         ordersBT = v.findViewById(R.id.fp_btn_orders);
         exitBT = v.findViewById(R.id.fp_btn_exit);
         downloadBT = v.findViewById(R.id.fp_btn_download);
+        chargeBT = v.findViewById(R.id.fp_btn_charge);
+
         ordersBT.setTypeface(App.appFont);
+        chargeBT.setTypeface(App.appFont);
         exitBT.setTypeface(App.appFont);
         downloadBT.setTypeface(App.appFont);
         nameTV = v.findViewById(R.id.fp_tv_name);
@@ -108,7 +112,12 @@ public class ProfileFragment extends Fragment {
         offstrTV.setTypeface(App.appFont);
         iv = v.findViewById(R.id.fp_iv_);
 
-
+        chargeBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showCharge();
+            }
+        });
         ordersBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -166,6 +175,10 @@ public class ProfileFragment extends Fragment {
         ((MainActivity) getActivity()).displayView(Settings.Fragments.Invoices, "", "", "");
     }
 
+    public void showCharge() {
+        Intent chargeIntent = new Intent(getActivity(), ChargeActivity.class);
+        startActivity(chargeIntent);
+    }
 
     public class LoginUserTask extends AsyncTask<Void, Void, Boolean> {
         private final String m_Phone, m_Code, m_Uniq, url;

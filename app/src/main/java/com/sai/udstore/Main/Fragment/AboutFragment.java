@@ -24,7 +24,6 @@ public class AboutFragment extends Fragment {
 
     private TextView title_program,title_abaut;//, site_program;
     private JustifiedTextView comment;
-    private Typeface bhoma, vazir;
     private ImageView instagram, telegram, facebook;//, linkedin;
 
     private static final String ARG_PARAM1 = "param1";
@@ -63,15 +62,13 @@ public class AboutFragment extends Fragment {
         View rv = inflater.inflate(R.layout.fragment_about, container, false);
 
         ((MainActivity) getActivity()).setMainTitle(R.string.main_text_about_us);
-        bhoma = Typeface.createFromAsset(getActivity().getAssets(), "font/bhoma.ttf");
-        vazir = Typeface.createFromAsset(getActivity().getAssets(), "font/vazir.ttf");
         title_abaut=rv.findViewById(R.id.fa_tv_title_about);
         title_abaut.setTypeface(App.appFont);
 
         title_program = (TextView) rv.findViewById(R.id.fh_tv_title_program);
 //        site_program = (TextView) rv.findViewById(R.id.fh_tv_site_program);
         comment = rv.findViewById(R.id.fh_tv_comment_about);
-        comment.setTypeFace(vazir);
+        comment.setTypeFace(App.appFont);
         comment.setLineSpacing(14);
         comment.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         comment.setText(R.string.contact_us);

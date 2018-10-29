@@ -331,8 +331,8 @@ public class JustifiedTextView extends View {
         return getTextPaint().getTypeface();
     }
 
-    public void setTypeFace(Typeface typeFace){
-        getTextPaint().setTypeface(Typeface.createFromAsset(mContext.getAssets(), mContext.getString(R.string.BTraffic)));
+    public void setTypeFace(Typeface typeFace) {
+        getTextPaint().setTypeface(typeFace);
     }
 
     public float getTextSize() {

@@ -137,9 +137,9 @@
                     <Space style="@style/SpaceStyleProfile" />
 
                     <Button
-                        android:id="@+id/fp_btn_exit"
+                        android:id="@+id/fp_btn_charge"
                         style="@style/ButtonStyleProfile"
-                        android:text="خروج" />
+                        android:text="شارژ" />
 
                     <Space style="@style/SpaceStyleProfile" />
 
@@ -152,6 +152,15 @@
 
                 </LinearLayout>
 
+                <Button
+                    android:id="@+id/fp_btn_exit"
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/padding_normal"
+                    android:background="@color/red"
+                    android:text="خروج"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </ScrollView>
 

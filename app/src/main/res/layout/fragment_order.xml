@@ -65,11 +65,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/padding_normal"
-            android:layout_marginRight="@dimen/padding_normal"
             android:layoutDirection="rtl"
             android:orientation="vertical"
-            android:paddingTop="@dimen/padding_large">
+            android:paddingEnd="@dimen/padding_normal"
+            android:paddingStart="@dimen/padding_normal"
+            android:layout_marginTop="@dimen/padding_large">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.1"
+                android:background="@color/black" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

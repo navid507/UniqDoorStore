@@ -24,13 +24,12 @@ public class App extends Application {
     public static ArrayList<Category> cats = new ArrayList<>();
     public static ArrayList<Product> products = new ArrayList<>();
 
-    public static Typeface vazirFont, appFont;
+    public static Typeface appFont;
     public static UserProfile userProfile;
 
     @Override
     public void onCreate() {
         context = getApplicationContext();
-        vazirFont = Typeface.createFromAsset(getApplicationContext().getAssets(), "font/vazir.ttf");
         appFont = Typeface.createFromAsset(getApplicationContext().getAssets(), "font/vazir.ttf");
         super.onCreate();
     }

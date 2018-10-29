@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sai.udstore.DataBase.Models.News;
+import com.sai.udstore.Main.App;
 import com.sai.udstore.R;
 import com.sai.udstore.Settings;
 import com.sai.udstore.sai.JustifiedTextView;
@@ -29,7 +30,6 @@ public class NewsMoreAdapter extends PagerAdapter {
     private TextView subject;
     private ImageView pic;
     private JustifiedTextView content;
-    private Typeface vazir;
     private int mImageThumbSize;
     private List<News> News;
     private LayoutInflater inflater;
@@ -59,14 +59,13 @@ public class NewsMoreAdapter extends PagerAdapter {
         View rv = inflater.inflate(R.layout.fragment_news_more, container, false);
         final News news = News.get(position);
 
-        vazir = Typeface.createFromAsset(context.getAssets(), "font/vazir.ttf");
         mImageThumbSize = context.getResources().getDimensionPixelSize(R.dimen.image_thumbnail);
 
         subject = (TextView) rv.findViewById(R.id.fnm_tv_news);
         content = (JustifiedTextView) rv.findViewById(R.id.fnm_tv_content_news);
         pic = (ImageView) rv.findViewById(R.id.fnm_img_news);
 
-        content.setTypeFace(vazir);
+        content.setTypeFace(App.appFont);
         content.setLineSpacing(14);
         content.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         content.setText(news.getContent());

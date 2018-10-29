@@ -120,10 +120,12 @@ public class Settings {
     public static String API_URL_T = "http://www.smartsteb.com/phone/";
 
     public static class Urls {
-        public final static String API_URL = root_url + "/api/";
 
+        public final static String API_URL = root_url + "/api/";
+        public final static String Charge = "http://unidoor.co/epayment/epaymentmabnacharge?username=%s&amount=%s&ip=1";
+        public final static String ENamad  = "https://trustseal.enamad.ir/Verify.aspx?id=67328&p=9gRT3ZbL31xYeqeB";
         public final static String Login = API_URL + "user/Login";
-//        public final static String News = API_URL + "news.php";
+        //        public final static String News = API_URL + "news.php";
         public final static String Offers = API_URL + "offers.php";
         public final static String Category = API_URL + "cats.php";
         public final static String ProductOfCat = API_URL + "product/productList";

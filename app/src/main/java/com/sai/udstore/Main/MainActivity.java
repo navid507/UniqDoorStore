@@ -31,6 +31,7 @@ import com.sai.udstore.Main.Fragment.FavoriteFragment;
 import com.sai.udstore.Main.Fragment.HomeFragment;
 import com.sai.udstore.Main.Fragment.InvoicesHistoryFragment;
 import com.sai.udstore.Main.Fragment.NewsMoreFragment;
+import com.sai.udstore.Main.Order.ChargeActivity;
 import com.sai.udstore.Main.Order.InvoiceFragment;
 import com.sai.udstore.Main.Fragment.ProfileFragment;
 import com.sai.udstore.Main.Register.RegisterActivity;
@@ -130,7 +131,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void showProductsOnTime(int delay) {
+    public void showHomeOnTime(int delay) {
         Timer tm = new Timer();
         tm.schedule(new TimerTask() {
 
@@ -140,7 +141,7 @@ public class MainActivity extends AppCompatActivity
 
                     @Override
                     public void run() {
-                        displayView(Settings.Fragments.Product, "0", "", "");
+                        displayView(Settings.Fragments.Home, "0", "", "");
 
                     }
                 });
@@ -253,7 +254,11 @@ public class MainActivity extends AppCompatActivity
 //            case R.id.nav_share:
 //                displayView(Settings.Fragments.Share, "", "", "");
 //                break;
+            case R.id.nav_charge:
+                showCharge();
+                break;
             case R.id.nav_profile:
+
                 displayView(Settings.Fragments.Profile, "", "", "");
                 break;
             case R.id.nav_contact_us:
@@ -267,6 +272,11 @@ public class MainActivity extends AppCompatActivity
         }
         drawer.closeDrawer(GravityCompat.END);
         return true;
+    }
+
+    private void showCharge() {
+        Intent chargeIntent = new Intent(MainActivity.this, ChargeActivity.class);
+        startActivity(chargeIntent);
     }
 
     public void setMainTitle(int title) {
@@ -393,7 +403,7 @@ public class MainActivity extends AppCompatActivity
 
     public void doRegister() {
         if (App.userProfile != null) {
-            showProductsOnTime(150);
+            showHomeOnTime(150);
             showsliderontime(1400);
             return;
         }

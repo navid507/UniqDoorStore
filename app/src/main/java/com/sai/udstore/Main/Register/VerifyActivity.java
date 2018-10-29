@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.sai.udstore.Main.App;
 import com.sai.udstore.Prefrence.Daos.User;
 import com.sai.udstore.Prefrence.EB_Preference;
 import com.sai.udstore.R;
@@ -28,7 +29,6 @@ public class VerifyActivity extends AppCompatActivity {
     private EditText code;
     private TextView title_code;
     private Button register, verify;
-    private Typeface vazir;
     private View mProgressView;
     private EB_Preference prefrence;
     private User userp;
@@ -41,7 +41,6 @@ public class VerifyActivity extends AppCompatActivity {
 
         prefrence = new EB_Preference(getApplicationContext());
         userp = prefrence.User();
-        vazir = Typeface.createFromAsset(getAssets(), "font/vazir.ttf");
 
         title_code = (TextView) findViewById(R.id.av_tv_title_code_verify);
         code = (EditText) findViewById(R.id.av_tv_code_verify);
@@ -49,10 +48,10 @@ public class VerifyActivity extends AppCompatActivity {
         register = (Button) findViewById(R.id.av_btn_register);
         verify = (Button) findViewById(R.id.av_btn_verify);
 
-        title_code.setTypeface(vazir);
-        register.setTypeface(vazir);
-        verify.setTypeface(vazir);
-        code.setTypeface(vazir);
+        title_code.setTypeface(App.appFont);
+        register.setTypeface(App.appFont);
+        verify.setTypeface(App.appFont);
+        code.setTypeface(App.appFont);
 
         code.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

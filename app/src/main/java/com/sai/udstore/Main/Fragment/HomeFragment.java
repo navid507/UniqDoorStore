@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sai.udstore.DataBase.Models.News;
 import com.sai.udstore.DataBase.Models.Product;
@@ -104,6 +106,18 @@ public class HomeFragment extends Fragment {
         populateOffersHSV();
         addNewsDots();
         Button allProductsBT = v.findViewById(R.id.fh_bt_products_show);
+        ImageView enam = v.findViewById(R.id.fm_iv_enamd);
+        enam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                String url = String.format(Settings.Urls.ENamad);
+//                Uri uri = Uri.parse(url);
+//                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//                startActivity(intent);
+            }
+        });
+
+
         allProductsBT.setTypeface(App.appFont);
         allProductsBT.setOnClickListener(new View.OnClickListener() {
 
@@ -154,10 +168,8 @@ public class HomeFragment extends Fragment {
 //
 //        }
 
-        for (Product p: App.products)
-        {
-            if (p.getIsOffer() == 0)
-            {
+        for (Product p : App.products) {
+            if (p.getIsOffer() == 0) {
                 addToHSV(p);
             }
         }
@@ -171,8 +183,8 @@ public class HomeFragment extends Fragment {
         final TextView name_new = subView.findViewById(R.id.fti_tv_title);
         final TextView price_new = subView.findViewById(R.id.fti_tv_price);
 
-        name_new.setTypeface(App.vazirFont);
-        price_new.setTypeface(App.vazirFont);
+        name_new.setTypeface(App.appFont);
+        price_new.setTypeface(App.appFont);
 
 //            String pathUrl1 = String.format(Locale.US, Settings.Urls.imgproduct,f.getImage());
 //            UF.loadandsave(getActivity(), Settings.Path.book, f.getImage(), img, pathUrl1, mImageThumbSize, mImageThumbSize, R.drawable.book_default, R.drawable.book_default);
@@ -349,7 +361,7 @@ public class HomeFragment extends Fragment {
             try {
                 final News cb = App.news.get(mNum);
                 titleTV.setText(cb.getSubject());
-                titleTV.setTypeface(App.vazirFont);
+                titleTV.setTypeface(App.appFont);
                 String pathUrl1 = cb.getImage();
                 Picasso.with(getContext())
                         .load(pathUrl1)

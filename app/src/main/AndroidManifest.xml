@@ -19,7 +19,7 @@
         <!-- Will not be called unless the application explicitly enables it -->
 
         <activity
-            android:name="com.sai.udstore.Main.SplashActivity"
+            android:name=".Main.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/splashActivity">
@@ -30,55 +30,58 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sai.udstore.Main.MainActivity"
+            android:name=".Main.MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.sai.udstore.Main.Register.RegisterActivity"
+            android:name=".Main.Register.RegisterActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.sai.udstore.Main.Register.VerifyActivity"
+            android:name=".Main.Register.VerifyActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.sai.udstore.Main.Register.RegisterAlertActivity"
+            android:name=".Main.Register.RegisterAlertActivity"
             android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:name="com.sai.udstore.Main.ProductsActivity"
+            android:name=".Main.ProductsActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.sai.udstore.Main.Products_moreActivity"
+            android:name=".Main.Products_moreActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.sai.udstore.Main.Register.SignUpActivity"
+            android:name=".Main.Register.SignUpActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.sai.udstore.Main.BuyProductsActivity"
+            android:name=".Main.BuyProductsActivity"
             android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:name="com.sai.udstore.Main.Products.ProductAddActivity"
+            android:name=".Main.Products.ProductAddActivity"
             android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:name="com.sai.udstore.Main.Order.InvoiceEditActivity"
+            android:name=".Main.Order.InvoiceEditActivity"
             android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:name="com.sai.udstore.Main.Order.SendOrderActivity"
+            android:name=".Main.Order.SendOrderActivity"
             android:theme="@style/AppTheme.Dialog" />
         <activity
-            android:name="com.sai.udstore.Main.Products.ProductsListActivity"
+            android:name=".Main.Products.ProductsListActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name="com.sai.udstore.Main.Products.ProductActivity"
+            android:name=".Main.Products.ProductActivity"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name="com.sai.udstore.Main.Order.InvoiceDetailsActivity"
+            android:name=".Main.Order.InvoiceDetailsActivity"
             android:label="@string/title_activity_invoice_details"
-            android:screenOrientation="sensorPortrait"></activity>
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".Main.Order.ChargeActivity"
+            android:theme="@style/AppTheme.Dialog"></activity>
     </application>
 
 </manifest>
